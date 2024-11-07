@@ -3,6 +3,11 @@ const buttons = document.querySelectorAll(".button");
 console.log(display, buttons);
 let string = "";
 
+function del() {
+  string = display.value;
+  display.value.slice(0, -1);
+}
+
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     console.log("button was clicked");
